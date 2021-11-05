@@ -9,7 +9,7 @@ const ru = {
   add_child: "Добавить ребёнка",
   delete: "Удалить",
   save: "Сохранить",
-  all_rights_reserved: "Все права защищены",
+  all_rights_reserved: "all rights reserved",
   years_old: "лет",
 };
 

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Navigation.css";
-import { NavigationLinkObject } from "../../interfaces";
+import { PageObject } from "../../interfaces";
 import Link from "../link/Link";
 import updatePathHook from "../../hooks/updatePathHook";
 
-export interface NavigationProps {
-  links: NavigationLinkObject[];
+interface NavigationProps {
+  children: React.ReactNode;
+  links: PageObject[];
 }
 
 const Navigation = (props: NavigationProps) => {
@@ -15,6 +16,7 @@ const Navigation = (props: NavigationProps) => {
   }, []);
   return (
     <ul className="navigation-links">
+      {props.children}
       {props.links.map((link, i) => (
         <Link
           className={currentPath === link.path ? "active" : ""}

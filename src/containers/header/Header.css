@@ -1,0 +1,9 @@
+.header-wrapper {
+  padding: 25px 0;
+  box-shadow: 0px 1px 0px rgba(17, 17, 17, 0.1);
+}
+
+.header-wrapper .logo {
+  position: absolute;
+  left: 7vw;
+}
