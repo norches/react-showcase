@@ -1,0 +1,15 @@
+.navigation-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12.5px;
+}
+.navigation-links a {
+  margin: 12.5px;
+  color: rgba(17, 17, 17, 0.48);
+}
+
+.navigation-links a.active {
+  color: #01a7fd;
+  font-weight: bold;
+}
