@@ -15,11 +15,13 @@ export interface ParentData extends PersonData {
 }
 
 export interface PreviewDataProps {
-  data?: ParentData;
+  data: ParentData;
 }
 
 export interface FormDataProps extends PreviewDataProps {
-  onChange?: (object: ParentData) => void;
+  maxChildren: number;
+  onChange: (object: ParentData) => void;
+  onSave: () => void;
 }
 
 export interface PagesProps extends Object {

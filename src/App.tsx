@@ -10,7 +10,7 @@ import Page from "./containers/page/Page";
 import { PagesProps, ParentData, PageObject } from "./interfaces";
 
 const initialFormData: ParentData = {
-  name: "Увайс",
+  name: null,
   age: null,
   children: [],
 };
@@ -34,18 +34,26 @@ const App = () => {
   const [formData, setFormData] = useState(initialFormData);
   const [previewData, setPreviewData] = useState(initialFormData);
   let pages = _pages.map((obj) => obj);
+  const maxChildren = 5;
 
   const onDataChangeHandler = (data: ParentData) => {
     console.log("data has changed:", data);
     setFormData(data);
   };
 
-  const onDataSaveHandler = (data: ParentData) => {
-    console.log("data has changed:", data);
+  const onDataSaveHandler = () => {
+    setFormData(formData);
+    setPreviewData(formData);
+    console.log("data has been saved:", formData);
   };
 
   const pagesProps: PagesProps = {
-    form: { data: formData, onChange: onDataChangeHandler },
+    form: {
+      data: formData,
+      maxChildren: maxChildren,
+      onChange: onDataChangeHandler,
+      onSave: onDataSaveHandler,
+    },
     preview: { data: previewData },
   };
 
