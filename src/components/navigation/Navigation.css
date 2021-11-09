@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12.5px;
+  position: relative;
 }
 .navigation-links a {
+  font-size: 14px;
   margin: 12.5px;
   color: rgba(17, 17, 17, 0.48);
 }

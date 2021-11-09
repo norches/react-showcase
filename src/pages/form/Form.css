@@ -1,0 +1,22 @@
+.child-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.parent-inputs {
+  margin-top: 10px;
+}
+.form-field {
+  margin-top: 10px;
+}
+.children-list {
+  margin-top: 30px;
+}
+.children-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.save-button {
+  margin-top: 30px;
+}

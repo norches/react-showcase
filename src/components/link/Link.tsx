@@ -18,7 +18,6 @@ const Link = (props: LinkProps) => {
     window.history.pushState({}, "", props.href);
     const navEvent = new PopStateEvent("popstate");
     window.dispatchEvent(navEvent);
-
     if (props.onClick) props.onClick(event);
   };
 

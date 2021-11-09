@@ -2,18 +2,19 @@ import React from "react";
 import "./Header.css";
 import { ReactComponent as Logo } from "../../images/logo.svg";
 import Navigation from "../../components/navigation/Navigation";
-import { NavigationLinkObject } from "../../interfaces";
+import { PageObject } from "../../interfaces";
 
-export interface HeaderProps {
-  links: NavigationLinkObject[];
+interface HeaderProps {
+  links: PageObject[];
 }
 
 const Header = (props: HeaderProps) => {
   return (
     <div className="header-wrapper">
-      <Logo className="logo" />
       <div>
-        <Navigation links={props.links} />
+        <Navigation links={props.links}>
+          <Logo className="logo" />
+        </Navigation>
       </div>
     </div>
   );

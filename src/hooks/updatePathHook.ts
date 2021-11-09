@@ -1,4 +1,4 @@
-const updatePathHook = (setState: () => void) => {
+const updatePathHook = (setState: () => void | undefined) => {
   const onLocationChange = () => {
     setState();
   };
