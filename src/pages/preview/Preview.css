@@ -1,0 +1,21 @@
+.heavy-text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.parent-block {
+  margin-top: 20px;
+}
+.children-list {
+  margin-top: 60px;
+}
+.child-block {
+  margin-top: 20px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.child-block div {
+  background: #f1f1f1;
+  padding: 10px 20px;
+  display: inline-block;
+}

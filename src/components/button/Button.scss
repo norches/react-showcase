@@ -1,0 +1,66 @@
+$primary-color: #01a7fd;
+$primary-hover: #0f79af;
+$primary-active: #59c79f;
+$primary-disabled: #ceecfc;
+$gray-border: rgba(17, 17, 17, 0.48);
+$gray: rgba(110, 65, 226, 0.04);
+$light-blue: rgba(110, 65, 226, 0.16);
+.button {
+  & .icon {
+    padding-right: 8px;
+  }
+  &.button {
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 100px;
+    padding: 8px 20px;
+    outline: none;
+  }
+
+  &-primary {
+    background-color: $primary-color;
+    color: #fff;
+    &:not(:disabled) {
+      &:hover {
+        background-color: $primary-hover;
+      }
+      &:active {
+        background-color: $primary-active;
+      }
+    }
+
+    &:disabled {
+      background-color: $primary-disabled;
+    }
+    &:focus:not(:hover):not(:active):not(:disabled) {
+      box-shadow: 0px 0px 0px 2px $gray-border inset;
+    }
+  }
+  &-secondary {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    &:not(:disabled) {
+      &:hover {
+        background-color: $gray;
+      }
+      &:active {
+        background-color: $light-blue;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+    &:focus:not(:hover):not(:active):not(:disabled) {
+      border: 2px solid $gray-border;
+    }
+  }
+  &-link {
+    color: $primary-color;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+  }
+}

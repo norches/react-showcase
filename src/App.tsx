@@ -37,14 +37,12 @@ const App = () => {
   const maxChildren = 5;
 
   const onDataChangeHandler = (data: ParentData) => {
-    console.log("data has changed:", data);
     setFormData(data);
   };
 
   const onDataSaveHandler = () => {
     setFormData(formData);
     setPreviewData(formData);
-    console.log("data has been saved:", formData);
   };
 
   const pagesProps: PagesProps = {

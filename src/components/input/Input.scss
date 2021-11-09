@@ -1,0 +1,65 @@
+$primary-color: #01a7fd;
+$animation-duration: 0.4s;
+
+@mixin label-active() {
+  font-size: 13px;
+  line-height: 16px;
+  transform: translateY(-16px);
+}
+
+.form-field {
+  display: block;
+
+  &--is-active {
+    .form-field__control {
+      &::after {
+        transform: scaleX(150);
+      }
+    }
+    .form-field__label {
+      @include label-active();
+    }
+  }
+  &--is-filled {
+    .form-field__label {
+      @include label-active();
+    }
+  }
+}
+.form-field__label {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  left: 0;
+  margin: 0;
+  padding: 18px 12px 0;
+  position: absolute;
+  top: 0;
+  transition: all $animation-duration;
+  width: 100%;
+  color: rgba(17, 17, 17, 0.48);
+}
+.form-field__control {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border: 1px solid #f1f1f1;
+}
+.form-field__input {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #111;
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 18px;
+  outline: 0;
+  padding: 0 12px 10px 12px;
+  width: 100%;
+}
+.form-field__textarea {
+  height: 150px;
+}

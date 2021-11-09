@@ -10,6 +10,7 @@ import { FormDataProps, ParentData } from "../../interfaces";
 import Input from "../../components/input/Input";
 import msg from "../../messages/ru/ru.json";
 import Button from "../../components/button/Button";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Form = (props: FormDataProps) => {
   const { maxChildren, data, onChange, onSave } = props;
@@ -79,7 +80,12 @@ const Form = (props: FormDataProps) => {
             {msg.kids} ({msg.maximum_n} {maxChildren})
           </div>
           <div className="children-list-add-button">
-            <Button disabled={addChildDisabled} onClick={onChildCreate}>
+            <Button
+              disabled={addChildDisabled}
+              onClick={onChildCreate}
+              type="secondary"
+              icon={faPlus}
+            >
               {msg.add_child}
             </Button>
           </div>
@@ -100,14 +106,20 @@ const Form = (props: FormDataProps) => {
               value={child.age || ""}
               onChange={(e) => onChildChange(i, "age", e)}
             />
-            <div className="delete-chiild">
-              <Button onClick={() => onChildDelete(i)}>{msg.delete}</Button>
-            </div>
+            <Button
+              className="delete-chiild"
+              type="link"
+              onClick={() => onChildDelete(i)}
+            >
+              {msg.delete}
+            </Button>
           </div>
         ))}
       </div>
 
-      <Button onClick={onSave}>{msg.save}</Button>
+      <Button className="save-button" type="primary" onClick={onSave}>
+        {msg.save}
+      </Button>
     </div>
   );
 };
